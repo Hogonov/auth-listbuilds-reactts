@@ -1,0 +1,48 @@
+.main {
+    display: block;
+    margin: 50px auto;
+    width: 60%;
+    border-radius: 5px;
+    background-color: #ffffff;
+    padding: 20px;
+    -webkit-box-shadow: 0 5px 10px 2px rgba(34, 60, 80, 0.2);
+    -moz-box-shadow: 0 5px 10px 2px rgba(34, 60, 80, 0.2);
+    box-shadow: 0 5px 10px 2px rgba(34, 60, 80, 0.2);
+}
+
+table td, table th {
+    text-align: center;
+}
+
+.pagination {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.pagination button {
+    margin-right: 10px;
+}
+
+.button {
+    background-color: #3273AB;
+}
+
+.button:hover {
+    background-color: #8cc3f3;
+}
+
+.button:focus {
+    background-color: #3273AB;
+}
+
+.activePage {
+    background-color: blueviolet;
+}
+
+.activePage:hover {
+    background-color: #a860ef;
+}
+
+.activePage:focus {
+    background-color: blueviolet;
+}

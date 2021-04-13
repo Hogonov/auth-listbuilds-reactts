@@ -1,0 +1,21 @@
+.navHeader {
+    position: fixed;
+    background-color: #3273ab;
+    width: 100%;
+    padding: 0 2rem;
+    top: 0;
+    z-index: 1;
+}
+
+.headerNavLink {
+    font-size: 30px;
+}
+
+.headerNavLink:hover {
+    background-color: #79a4c6;
+
+}
+
+.leftBlock {
+    float: left;
+}

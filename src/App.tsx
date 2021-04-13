@@ -1,26 +1,26 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+import {BrowserRouter as Router} from 'react-router-dom'
+import {useRoutes} from "./routes"
+import {useAuth} from "./Hooks/auth.hook"
+import {AuthContext} from "./Context/AuthContext"
+import 'materialize-css'
+import {Header} from "./Component/Header";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    const {token, login, logout} = useAuth()
+    const isAuthenticated:boolean = !!token
+
+    const routes = useRoutes(isAuthenticated);
+
+    return <AuthContext.Provider
+        value={{token, isAuthenticated, login, logout}}>
+        <Router>
+            {isAuthenticated && <Header/>}
+            <div className='routes'>
+                {routes}
+            </div>
+        </Router>
+    </AuthContext.Provider>
 }
 
 export default App;
